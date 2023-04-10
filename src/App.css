@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+:root {
+  --list-color: rgb(80, 80, 80);
+  --btn-color: rgb(0, 162, 255);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-size: cover;
+  background-image: url('/images/Todo-bg.png');
+  background-color: #f3fcff;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 5vh;
+  font-size: 1.5rem;
+  padding: 2rem;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.form .logo {
+  width: 150px;
+  height: 100%;
+  margin-bottom: 20px;
+  pointer-events: none;
+}
+
+.form .create-task {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  width: 100%;
+}
+
+.form .create-task .input-task {
+  margin-top: 5px;
+  width: 350px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  outline: none;
+  font-size: 16px;
+  box-shadow: 0 2px 14px #0066ff2a;
+ /* box-shadow: 0 0 0 2px #fff, 0 0 0 4px  rgb(0, 162, 255)
+*/
+}
+
+.newtask {
+text-align: left;
+}
+
+.input-task:focus {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px  var(--btn-color);
+}
+
+.add {
+  margin-top: 15px;
+  background-color:  var(--btn-color);
+  outline: none;
+  border: none;
+  width: 350px;
+  padding: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.add:hover {
+  background-color:  rgb(41, 176, 255);
+}
+
+.add:active {
+  background-color:  rgb(0, 112, 177);
+}
+
+.form .create-task label {
+  font-size: 20px;
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(80, 80, 80);
+}
+
+.tasks {
+  margin: 20px auto;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 3px #0048b4;
+  width: 100%;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  pointer-events: none;
+}
+
+.list li:has(input:checked) label {
+  color: hsla(0, 0%, 55%, 0.973);
+  text-decoration: line-through;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  /*border: 2px solid #dbeaf8c5;*/
+  padding: px;
+  /*background-color: #ffffff9d;*/
+  border-radius: 6px;
+  margin: 5px;
+}
+
+.list li {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+  gap: 4.5rem;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 10px;
+  position: relative;
+  color: #000;
+  border: 1px solid rgb(75, 198, 255);
+  background-color: rgba(255, 255, 255, 0.575);
+  font-size: 20px;
+}
+
+.list li label {
+  display: flex;
+  gap: 0.25rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+.list li:has(input:focus-visible) label {
+  outline: 1px solid hsl(200, 100%, 50%);
+}
+
+.list li input {
+  outline: none;
+  width: 0;
+  height: 0;
+  appearance: none;
+  pointer-events: none;
+  position: absolute;
+}
+
+.list li label::before {
+  content: "";
+  display: block;
+  width: 0.9rem;
+  height: 0.9rem;
+  background: hsl(200, 86%, 77%);
+  border-radius: 0.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list li label:hover::before {
+  background: hsl(200, 100%, 80%);
+}
+
+.list li:has(input:checked) label::before {
+  content: "✔";
+  background: hsl(200, 100%, 40%);
+  color: hsl(200, 100%, 90%);
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.list li:has(input:checked) label:hover::before {
+  background: hsl(200, 100%, 30%);
+}
+
+.delete {
+  margin-left: auto;
+  margin: -10px;
+  background: transparent;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  right: 0;
+  transform: translateX(-5px);
+}
+
+.delete img{
+  width: 20px;
+  height: 20px;
+}
