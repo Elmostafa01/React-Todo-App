@@ -14,7 +14,7 @@ An intuitive and easy-to-use Todo list app built with React. Keep track of your 
 
 To add a task to your to-do list, type the task into the input field and click the "Add" button. To delete a task, click the trash can icon next to the task.
 
-**Technologies Used **
+**Technologies Used** 
 
 Vite
 React
