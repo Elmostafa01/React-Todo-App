@@ -1,7 +1,7 @@
 # React-Todo-App
 An intuitive and easy-to-use Todo list app built with React. Keep track of your daily tasks, add new ones, and delete them as you complete them. With local storage integration, your tasks will be saved even after you close the app. The sleek design and simple interface make managing your tasks a breeze.
 
-![alt text]([https://freeimage.host/i/JKYIZbI](https://iili.io/JKYIZbI.png))
+![alt text](https://iili.io/JKYIZbI.png)
 
 **Installation**
 
